@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGIST TJKT DENSITE</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="body">
+    <img class="bg" src="https://images.hdqwalls.com/download/mountains-retreat-minimal-beautiful-4k-vl-2560x1080.jpg" alt="">
+
+    <div class="form">
+        <h1>Registrasi Siswa TJKT</h1>
+        <h5 style="color: rgb(0, 94, 255);">13/APRIL/2023</h5>
+        <form id="form">
+            <div class="form-group">
+
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama siswa...">
+            </div>
+            <div class="form-group">
+
+                <input type="text" id="nis" name="nis" placeholder="Masukkan NIS siswa...">
+            </div>
+            <div class="form-group">
+
+                <input type="text" id="mapel" name="mapel" placeholder="Masukkan mata pelajaran...">
+            </div>
+            <div class="form-group">
+
+                <input type="text" id="no-hp" name="no-hp" placeholder="Masukkan nomor HP siswa...">
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('form');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const nama = document.getElementById('nama').value.trim();
+            const nis = document.getElementById('nis').value.trim();
+            const mapel = document.getElementById('mapel').value.trim();
+            const noHp = document.getElementById('no-hp').value.trim();
+
+            if (nama === '' || nis === '' || mapel === '' || noHp === '') {
+                alert('Harap lengkapi semua data!');
+            } else {
+                alert(`Data telah berhasil disimpan:\nNama: ${nama}\nNIS: ${nis}\nMata Pelajaran: ${mapel}\nNomor HP: ${noHp}`);
+                form.reset();
+            }
+        });
+    </script>
+</body>
+
+</html>
